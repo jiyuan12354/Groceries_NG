@@ -1,0 +1,2 @@
+# Groceries_NG
+这是一个用来学习NativeScript的demo
