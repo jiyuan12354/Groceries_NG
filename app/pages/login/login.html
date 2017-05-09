@@ -1,0 +1,14 @@
+<!--<Page>-->
+<StackLayout #container>
+  <Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
+  <TextField  #email  hint="Email Address" [(ngModel)]="user.email" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField  #password hint="PassWord" secure="true" [(ngModel)]="user.password"></TextField>
+
+  <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>
+  <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"> 
+    <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" row="1" horizontalAlignment="center"
+    verticalAlignment="center"></ActivityIndicator>
+  </Button>
+
+</StackLayout>
+<!--</Page>-->
